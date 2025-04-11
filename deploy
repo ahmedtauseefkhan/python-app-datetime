@@ -1,0 +1,22 @@
+
+1. Provision EC2 with Terraform  
+  - Create EC2 instance with Terraform  
+  - Configure security group to allow port 8000 or 80
+
+2. Set up GitHub Actions for CI/CD
+  - On push to main, GitHub builds & deploys app  
+  - Use SSH to connect to EC2  
+  - Install Docker (if needed)  
+  - Clone repo & run container
+
+3. Configure GitHub Secrets  
+  - EC2_HOST → EC2 public IP  
+  - EC2_USER → Instance user name  
+  - EC2_SSH_KEY → private key for EC2 access
+
+4. Run the app on EC2  
+  - Build and run Docker container on EC2  
+  - Expose it on a public IP (port 80 or 8000)
+
+5. Access the API
+  - Hit http://<EC2-IP>/datetime
